@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block title %}Alteração de dados{% endblock %}
+
+{% block content %}
+<h2>Alteração de Dados</h2>
+<div>
+    <p>Os dados da sua conta estão abaixo:</p>
+    <table>
+        <form action="{{ url_for('update') }}" method="post" autocomplete="off">
+            <fieldset >
+                <legend><b>Alteração de Dados</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" value="{{conta['nome']}}">
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>    
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" class="inputUser" value="{{conta['cpf']}}">
+                    <label for="cpf" class="labelInput">CPF</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="pet" id="pet" class="inputUser" value="{{conta['pet']}}">
+                    <label for="pet" class="labelInput">pet</label>
+                </div>
+            <fieldset>
+                <legend id='titulo'>Endereço</legend>
+                
+                <div class="inputBox">
+                    <input type="text" name="pais" id="pais" class="inputUser" value="{{conta['pais']}}">
+                    <label for="pais" class="labelInput">País</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" value="{{conta['estado']}}">
+                    <label for="estado" class="labelInput">Estado</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="municipio" id="municipio" class="inputUser" value="{{conta['municipio']}}">
+                    <label for="municipio" class="labelInput">Município</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cep" id="cep" class="inputUser" value="{{conta['cep']}}">
+                    <label for="Cep" class="labelInput">Cep</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="logradouro" id="logradouro" class="inputUser" value="{{conta['logradouro']}}">
+                    <label for="logradouro" class="labelInput">Logradouro<abel>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="numero" id="numero" class="inputUser" value="{{conta['numero']}}">
+                    <label for="numero" class="labelInput">Número</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="complemento" id="complemento" class="inputUser" value="{{conta['complemento']}}">
+                    <label for="complemento" class="labelInput">Complemento</label>
+                </div>
+            </fieldset>
+                <br><br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" value="{{conta['email']}}">
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="senha" id="senha" class="inputUser" value="{{conta['senha']}}">
+                    <label for="senha" class="labelInput">Senha</label>                    
+                </div>  
+                <br>
+                <input class=botao type="submit" name="submit" id="submit" value="Salvar alterações">
+            </form>
+
+            
+                
+    </div>
+
+{% endblock %}              

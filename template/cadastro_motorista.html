@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css3/estilos.css') }}">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="box">
+        <form action="{{ url_for('cadastro_motorista') }}" method="post" autocomplete="off">
+            <fieldset >
+                <legend><b>Cadastro de motoristas</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>    
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cpf" class="labelInput">CPF</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="placa" id="placa" class="inputUser" required>
+                    <label for="placa" class="labelInput">placa</label>
+                </div>
+            <fieldset>
+                <legend id='titulo'>Endereço</legend>
+                
+                <div class="inputBox">
+                    <input type="text" name="pais" id="pais" class="inputUser" required>
+                    <label for="pais" class="labelInput">País</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput">Estado</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="municipio" id="municipio" class="inputUser" required>
+                    <label for="municipio" class="labelInput">Município</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cep" id="cep" class="inputUser" required>
+                    <label for="Cep" class="labelInput">Cep</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="logradouro" id="logradouro" class="inputUser" required>
+                    <label for="logradouro" class="labelInput">Logradouro<abel>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="numero" id="numero" class="inputUser" required>
+                    <label for="numero" class="labelInput">Número</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="complemento" id="complemento" class="inputUser">
+                    <label for="complemento" class="labelInput">Complemento</label>
+                </div>
+            </fieldset>
+                <br><br>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">Senha</label>
+                </div>          
+                <br><br>    
+                <div class="msg">{{ msg }}</div>
+                <br>
+                <input type="submit" name="submit" id="submit" value="Continuar" onclick="">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
